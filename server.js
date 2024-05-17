@@ -5,10 +5,7 @@ const app = express();
 dotenv.config();
 
 mongoose
-  .connect(process.env.BSMS_MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.BSMS_MONGO_URL)
   .then((_result) => console.log("database connected"))
   .catch((err) => console.log(err));
 
